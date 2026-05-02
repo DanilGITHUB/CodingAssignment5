@@ -1,0 +1,348 @@
+/* 
+   CodingAssignment5
+
+
+ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*CSS Variables for Color Theme*/
+:root {
+    --bg-main: #1a1a2e;
+    --bg-header: #16213e;
+    --bg-row2: #0f3460;
+    --bg-col-links: #533483;
+    --bg-col-picture: #0f3460;
+    --bg-col-rating: #533483;
+    --bg-row3: #0f3460;
+    --bg-ingredients: #1a1a2e;
+    --bg-equipment: #16213e;
+    --bg-directions: #1a1a2e;
+    --bg-footer: #16213e;
+    --accent: #e94560;
+    --accent2: #f5a623;
+    --text-light: #e0e0e0;
+    --text-muted: #a0a8c0;
+    --text-heading: #ffffff;
+    --border-color: #e9456044;
+    --font-heading: 'Cinzel', Georgia, serif;
+    --font-body: 'Lato', Helvetica, sans-serif;
+}
+
+/*Base Body*/
+body {
+    background-color: var(--bg-main);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Float-based Box Model */
+
+/* Clears floats after each row */
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* All columns float left */
+[class*="col"] {
+    float: left;
+}
+
+/* Row 1, HEADER (100% width) */
+#header {
+    width: 100%;
+    background-color: var(--bg-header);
+    padding: 28px 40px;
+    border-bottom: 3px solid var(--accent);
+    text-align: center;
+}
+
+#header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.6em;
+    color: var(--text-heading);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+#header .subtitle {
+    font-family: var(--font-body);
+    color: var(--accent2);
+    font-size: 0.95em;
+    margin-top: 6px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/*  Row 2, Links, Picture, Rating & Conversion */
+
+/* Column: Links (left) */
+#col-links {
+    width: 20%;
+    background-color: var(--bg-col-links);
+    padding: 20px 16px;
+    min-height: 320px;
+    border-right: 2px solid var(--border-color);
+}
+
+#col-links h3 {
+    font-family: var(--font-heading);
+    color: var(--accent2);
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 6px;
+}
+
+#col-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+#col-links ul li {
+    margin-bottom: 10px;
+}
+
+#col-links ul li a {
+    display: block;
+    color: var(--text-light);
+    text-decoration: none;
+    background-color: #3a2060;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.88em;
+    transition: background 0.2s, color 0.2s;
+    border-left: 3px solid var(--accent);
+}
+
+#col-links ul li a:hover {
+    background-color: var(--accent);
+    color: #fff;
+}
+
+/* Column: Picture (center) */
+#col-picture {
+    width: 45%;
+    background-color: var(--bg-col-picture);
+    padding: 20px;
+    min-height: 320px;
+    border-right: 2px solid var(--border-color);
+    text-align: center;
+}
+
+#col-picture figure {
+    margin: 0;
+}
+
+#col-picture img {
+    width: 100%;
+    max-width: 360px;
+    height: 220px;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
+
+#col-picture figcaption {
+    font-size: 0.78em;
+    color: var(--text-muted);
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Column: Rating & Conversion (right) */
+#col-rating {
+    width: 35%;
+    background-color: var(--bg-col-rating);
+    padding: 20px 18px;
+    min-height: 320px;
+}
+
+#col-rating h3 {
+    font-family: var(--font-heading);
+    color: var(--accent2);
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 6px;
+}
+
+#col-rating fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 10px 14px;
+    margin-bottom: 18px;
+}
+
+#col-rating legend {
+    color: var(--accent2);
+    font-size: 0.85em;
+    padding: 0 6px;
+}
+
+#col-rating label {
+    display: block;
+    margin: 6px 0;
+    font-size: 0.9em;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+#col-rating input[type="radio"] {
+    margin-right: 8px;
+    accent-color: var(--accent);
+}
+
+.conversion-area {
+    margin-top: 10px;
+}
+
+.conversion-area label {
+    font-size: 0.85em;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.conversion-area input[type="text"] {
+    width: 70px;
+    padding: 5px 8px;
+    background: #1a1a2e;
+    border: 1px solid var(--accent);
+    color: var(--text-light);
+    border-radius: 3px;
+    font-size: 0.9em;
+    margin-right: 6px;
+}
+
+/* Row 3 - Ingredients, Equipment, Directions*/
+
+/* Column: Ingredients */
+#col-ingredients {
+    width: 25%;
+    background-color: var(--bg-ingredients);
+    padding: 20px 16px;
+    border-right: 2px solid var(--border-color);
+    border-top: 2px solid var(--border-color);
+}
+
+/* Column: Equipment */
+#col-equipment {
+    width: 20%;
+    background-color: var(--bg-equipment);
+    padding: 20px 16px;
+    border-right: 2px solid var(--border-color);
+    border-top: 2px solid var(--border-color);
+}
+
+/* Column: Directions */
+#col-directions {
+    width: 55%;
+    background-color: var(--bg-directions);
+    padding: 20px 20px;
+    border-top: 2px solid var(--border-color);
+}
+
+/* Shared heading style for row 3 columns */
+#col-ingredients h3,
+#col-equipment h3,
+#col-directions h3 {
+    font-family: var(--font-heading);
+    color: var(--accent);
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 6px;
+}
+
+#col-ingredients ul,
+#col-equipment ul {
+    list-style: none;
+    padding: 0;
+}
+
+#col-ingredients ul li,
+#col-equipment ul li {
+    padding: 5px 0;
+    font-size: 0.88em;
+    color: var(--text-light);
+    border-bottom: 1px dotted var(--border-color);
+}
+
+#col-ingredients ul li::before {
+    content: "• ";
+    color: var(--accent2);
+}
+
+#col-equipment ul li::before {
+    content: "→ ";
+    color: var(--accent);
+}
+
+#col-directions ol {
+    padding-left: 18px;
+}
+
+#col-directions ol li {
+    font-size: 0.9em;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+/* Highlight key words with span */
+.highlight {
+    color: var(--accent2);
+    font-weight: bold;
+}
+
+.step-num {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* row 4, footer (100% width) */
+#footer {
+    width: 100%;
+    background-color: var(--bg-footer);
+    padding: 18px 40px;
+    border-top: 3px solid var(--accent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    clear: both;
+}
+
+#footer p {
+    font-size: 0.82em;
+    color: var(--text-muted);
+}
+
+#footer a {
+    color: var(--accent2);
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+/*  utility classes */
+.container-fluid {
+    width: 100%;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deviled Eggs - Recipe</title>
+    <!-- Google Fonts, distinctive from previous assignments -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- 
+     CONTAINER (Box Model outer wrapper)
+      -->
+<div class="container-fluid">
+
+    <!-- 
+         ROW 1: HEADER — spans 100% of page
+          -->
+    <div class="row">
+        <div id="header" class="col" style="width:100%">
+            <h1>Deviled Eggs</h1>
+            <p class="subtitle">A classic appetizer &mdash; adapted from <em>U.S.A. Cookbook</em> by Sheila Lukins</p>
+        </div>
+    </div><!-- END ROW 1 -->
+
+    <!-- 
+         ROW 2: Links | Picture | Rating & Conversion
+          -->
+    <div class="row">
+
+        <!-- Column: Links (left) -->
+        <div id="col-links" class="col" style="width:20%">
+            <h3>Recipe Links</h3>
+            <ul>
+                <li><a href="#">Recipe 1</a></li>
+                <li><a href="#">Recipe 2</a></li>
+                <li><a href="#">Recipe 3</a></li>
+                <li><a href="#">Recipe 4</a></li>
+            </ul>
+        </div><!-- END col-links -->
+
+        <!-- Column: Picture (center) -->
+        <div id="col-picture" class="col" style="width:45%">
+            <figure style="margin:0;">
+                <!-- Using a placeholder image — replace src with your actual image path -->
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Deviled_eggs_%285765128618%29.jpg/640px-Deviled_eggs_%285765128618%29.jpg"
+                    alt="Plate of deviled eggs garnished with paprika and chives"
+                >
+                <figcaption>
+                    Photo by: <span class="highlight">Willis Lam</span>, CC BY-SA 4.0
+                    via Wikimedia Commons.
+                    <a href="https://cooking.nytimes.com/recipes/6866-classic-deviled-eggs" target="_blank">Original Source</a>
+                </figcaption>
+            </figure>
+        </div><!-- END col-picture -->
+
+        <!-- Column: Rating & Conversion (right) -->
+        <div id="col-rating" class="col" style="width:35%">
+
+            <!-- Rating section -->
+            <h3>Rate This Recipe</h3>
+            <fieldset>
+                <legend>How difficult is this recipe?</legend>
+                <label><input type="radio" id="easy" name="difficulty" value="easy"> Easy</label>
+                <label><input type="radio" id="med" name="difficulty" value="med"> Intermediate</label>
+                <label><input type="radio" id="hard" name="difficulty" value="hard"> Hard</label>
+            </fieldset>
+
+            <!-- Conversion section -->
+            <h3>Conversion</h3>
+            <div class="conversion-area">
+                <label for="tblspn">Tablespoons:</label>
+                <input type="text" id="tblspn" name="tblspn" size="10">
+                <label for="cups">= Cups:</label>
+                <input type="text" id="cups" name="cups" size="10">
+            </div>
+
+        </div><!-- END col-rating -->
+
+    </div><!-- END ROW 2 -->
+
+    <!-- 
+         ROW 3: Ingredients | Equipment | Directions
+          -->
+    <div class="row">
+
+        <!-- Column: Ingredients (left) -->
+        <div id="col-ingredients" class="col" style="width:25%">
+            <h3>Ingredients</h3>
+            <ul>
+                <li><span class="highlight">6</span> large eggs</li>
+                <li><span class="highlight">1 tsp</span> Dijon mustard</li>
+                <li><span class="highlight">1–2 dashes</span> Tabasco sauce, to taste</li>
+                <li><span class="highlight">&frac14; tsp</span> freshly ground black pepper</li>
+                <li><span class="highlight">1 tbsp</span> snipped fresh chives</li>
+                <li><span class="highlight">3 tbsp</span> mayonnaise</li>
+                <li>Paprika, for garnish</li>
+                <li>Whole fresh chives, for garnish</li>
+            </ul>
+        </div><!-- END col-ingredients -->
+
+        <!-- Column: Equipment (center) -->
+        <div id="col-equipment" class="col" style="width:20%">
+            <h3>Equipment</h3>
+            <ul>
+                <li>Small saucepan</li>
+                <li>Tablespoon</li>
+                <li>Fork</li>
+                <li>Knife</li>
+                <li>Platter</li>
+            </ul>
+        </div><!-- END col-equipment -->
+
+        <!-- Column: Directions (right) -->
+        <div id="col-directions" class="col" style="width:55%">
+            <h3>Directions</h3>
+            <ol>
+                <li>
+                    <span class="step-num">Boil:</span>
+                    Rinse eggs with warm water, and place in a
+                    <span class="highlight">small saucepan</span>.
+                    Cover with cold water, place the pan over medium-high heat and bring to a boil.
+                    Turn off heat, cover and let sit for <span class="highlight">10–15 minutes</span>.
+                    Drain, rinse under cold water and peel. Cool in the refrigerator,
+                    loosely covered, for 15 minutes.
+                </li>
+                <li>
+                    <span class="step-num">Mix Filling:</span>
+                    Halve eggs lengthwise, and carefully scoop out yolks.
+                    Place yolks in a bowl, and mash with a fork.
+                    Add mustard, Tabasco, salt, pepper and snipped chives.
+                    Stir in <span class="highlight">mayonnaise</span>.
+                </li>
+                <li>
+                    <span class="step-num">Fill &amp; Garnish:</span>
+                    Fill each egg white with about
+                    <span class="highlight">1&frac12; teaspoons</span>
+                    of the egg-yolk mixture and dust the top with paprika.
+                    Arrange in a spoke design on a platter;
+                    garnish with whole chives.
+                </li>
+            </ol>
+        </div><!-- END col-directions -->
+
+    </div><!-- END ROW 3 -->
+
+    <!-- 
+         ROW 4: FOOTER — spans 100% of page
+         -->
+    <div class="row">
+        <div id="footer" class="col" style="width:100%">
+            <p><a href="#">&larr; Back to the Main Page</a></p>
+            <p>This page created as an <em>academic activity only</em>.</p>
+        </div>
+    </div><!-- END ROW 4 -->
+
+</div><!-- END container-fluid -->
+
+</body>
+</html>
